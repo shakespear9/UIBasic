@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UIBasic</string>
+    <string-array name="students">
+        <item>Nuttakorn</item>
+        <item>Godzilla</item>
+        <item>Khidorah</item>
+        <item>Kong</item>
+        <item>Scylla</item>
+    </string-array>
 </resources>

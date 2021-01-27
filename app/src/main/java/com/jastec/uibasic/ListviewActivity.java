@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class ListviewActivity extends AppCompatActivity {
 
 
     private ListView citiesListView;
+    private Spinner studentsSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,39 @@ public class ListviewActivity extends AppCompatActivity {
 
 
         citiesListView = findViewById(R.id.citiesList);
+        studentsSpinner = findViewById(R.id.studentsSpinner);
+
+        // MEMO : Spinner is a dropdown menu
+
+//        ArrayList<String> students = new ArrayList<>();
+//        students.add("Nuttakorn");
+//        students.add("Emma");
+//        students.add("Godzilla");
+//        students.add("Kong");
+//        students.add("Khidora");
+//
+//        ArrayAdapter<String> studentsAdapter = new ArrayAdapter<>(
+//                this,
+//                android.R.layout.simple_spinner_dropdown_item,
+//                students
+//        );
+//
+//        studentsSpinner.setAdapter(studentsAdapter);
+        
+        studentsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(ListviewActivity.this, students.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListviewActivity.this, studentsSpinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        
+
         // MEMO 1 : ListView is a one of the options to show diffence options
 
         ArrayList<String> cities = new ArrayList<>();
