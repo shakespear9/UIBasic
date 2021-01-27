@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:id="@+id/txtHello"
+        android:background="@color/teal_700"
+        android:layout_weight="20"/>
+
+
+<!--    MEMO : layout_weight = Ratio that allocate in LinearLayout สัดส่วนที่จะใช้ใน Relative Layout-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:id="@+id/txtName"
+        android:layout_marginTop="10dp"
+        android:layout_weight="80"
+        android:background="@color/purple_200"/>
+
+
+
+</LinearLayout>
